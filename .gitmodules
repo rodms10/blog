@@ -1,0 +1,6 @@
+[submodule "ghostly"]
+	path = ghostly
+	url = https://github.com/rodms10/ghostly.git
+[submodule "published"]
+	path = published
+	url = https://github.com/rodms10/rodms10.github.io.git

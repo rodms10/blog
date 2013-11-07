@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% set title='Page Not Found.' %}
+{% block title %}404: {{ title }}{% endblock %}
+
+{% block header %}
+<header id="article-head">
+  <div class="vertical">
+    <div class="inner">
+      <a id="blog-logo" href="{{ SITEURL }}">
+        <img alt="Blog Logo" src="{{ SITEURL }}/{{ AVATAR_IMG }}">
+      </a>
+      <h2 class="blog-title">
+        {{ SITENAME }}
+      </h2>
+      <h3 class="blog-description">
+        {{ SITESUBTITLE }}
+      </h3>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<section class="post">
+  <h2 class="post-title">
+    {{ title }}
+  </h2>
+  <p>Oops... Can't seem to find what you were looking for.</p>
+</section>
+{% endblock %}
