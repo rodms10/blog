@@ -3,10 +3,11 @@
 $(function(){
   var trigger = $("#nav-tags"),
     menu = $("#tag-menu"),
-    tagMenuVisible = false;
+    tagMenuVisible = false,
+    isTouch = false;
 
   function showTagsMenu() {
-    if (tagMenuVisible)
+    if (tagMenuVisible || isTouch)
       return;
 
     tagMenuVisible = true;
@@ -32,11 +33,15 @@ $(function(){
     });
   }
 
+  trigger.on("touchstart MSPointerOver pointerover", function(event){
+    var origEvent = event.originalEvent;
+    if (origEvent.pointerType && origEvent.pointerType != 2 && origEvent.pointerType != "touch")
+      return;
+
+    // Don't show menu, go to url.
+    isTouch = true;
+  });
+
   trigger.on("mouseenter", showTagsMenu);
   $(".navbar").on("mouseleave", hideTagsMenu);
-
-//  trigger.on("click", function(){
-//    tagMenuVisible ? hideTagsMenu() : showTagsMenu();
-//  });
-
 });
