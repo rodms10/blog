@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Rodrigo Silveira'
 SITENAME = u'Rodrigo Silveira'
 SITESUBTITLE = u'Digressions on  life, web and stuff.'
-SITEURL = 'http://rodlnx:8000'
+SITEURL = 'http://localhost:8000'
 DESCRIPTION = "Rodrigo Silveira's blog."
 AVATAR_IMG = 'theme/img/avatar.jpeg'
 
@@ -35,11 +35,17 @@ FEED_ALL_ATOM = TRANSLATION_FEED_ATOM = None
 TWITTER_USERNAME = 'rodms10'
 GITHUB_URL = 'https://github.com/rodms10'
 
-FILES_TO_COPY = (
-    ('extra/CNAME', 'CNAME'),
-    ('extra/favicon.ico', 'favicon.ico'),
-    ('extra/README.md', 'README.md'),
-)
+STATIC_PATHS = [
+    'extra/CNAME',
+    'extra/favicon.ico',
+    'extra/README.md',
+]
+
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'},
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/README.md': {'path': 'README.md'},
+}
 
 TEMPLATE_PAGES = {
     'extra/404.html': '404.html',
@@ -52,6 +58,8 @@ DELETE_OUTPUT_DIRECTORY = False
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = False
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
+PATH = 'content/'
+ARTICLE_DIR = 'posts/'
 ARTICLE_URL = 'posts/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{slug}/index.html'
 YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
