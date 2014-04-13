@@ -34,6 +34,7 @@ FEED_ALL_ATOM = TRANSLATION_FEED_ATOM = None
 
 TWITTER_USERNAME = 'rodms10'
 GITHUB_URL = 'https://github.com/rodms10'
+LINKEDIN_URL = 'http://www.linkedin.com/in/rodms10'
 
 STATIC_PATHS = [
     'extra/CNAME',
