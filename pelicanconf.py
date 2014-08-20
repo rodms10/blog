@@ -21,7 +21,10 @@ FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
-PLUGIN_PATH = "pelican-plugins"
+PLUGIN_PATHS = [
+    "pelican-plugins"
+]
+
 PLUGINS = [
     'assets',
     'minify',
@@ -61,7 +64,7 @@ DELETE_OUTPUT_DIRECTORY = False
 RELATIVE_URLS = False
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
 PATH = 'content/'
-ARTICLE_DIR = 'posts/'
+ARTICLE_PATHS = [ 'posts/' ]
 ARTICLE_URL = 'posts/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{slug}/index.html'
 YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
