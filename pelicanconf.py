@@ -9,7 +9,11 @@ SITEURL = 'http://localhost:8000'
 DESCRIPTION = "Rodrigo Silveira's blog."
 AVATAR_IMG = 'theme/img/avatar.jpeg'
 
-MD_EXTENSIONS = ['codehilite', 'extra']
+MD_EXTENSIONS = [
+    'codehilite',
+    'extra',
+    'youtube'
+]
 THEME = "ghostly"
 
 TIMEZONE = 'America/Los_Angeles'
