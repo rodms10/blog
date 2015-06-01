@@ -7,5 +7,5 @@ I'm lucky enough to earn a living doing what I love. I've been fascinated by ord
 Check out my posts at [Mozilla Hacks blog](https://hacks.mozilla.org/author/rsilveira/) as well.
 
 ---
-Thanks for checking out my blog,
+Thanks for checking out my blog,<br>
 --Rodrigo
