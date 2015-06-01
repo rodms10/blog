@@ -12,7 +12,6 @@ AVATAR_IMG = 'theme/img/avatar.jpeg'
 MD_EXTENSIONS = [
     'codehilite',
     'extra',
-    'youtube'
 ]
 THEME = "ghostly"
 
